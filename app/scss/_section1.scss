@@ -1,0 +1,93 @@
+.section1 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 220px;
+    position: relative;
+
+    @include breakpoint_up(large){
+        padding-top: 160px;
+        padding-bottom: 0;
+        background-color: #FAFAFA;
+    }
+    &__wrap {
+
+        @include breakpoint_up(large){
+            display: flex;
+            position: relative;
+            
+        }
+    }
+
+    &__slogan {
+        color: $veryDarkBlue;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 34px;
+
+        @include breakpoint_up(large){
+            font-size: 32px;
+            margin-bottom: 120px;
+        }
+    }
+
+    &__image {
+        margin-bottom: 50px;
+        background-image: url(/images/illustration-editor-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 110%;
+        height: 350px;
+        position: relative;
+        left: -5%;
+
+        @include breakpoint_up(large){
+            order: 2;
+            position: relative;
+            top: -253px;
+            left: 50px;
+            background-image: url(/images/illustration-editor-desktop.svg);
+            background-size: 134%;
+            width: 300%;
+            height: 1000px;
+        }
+        
+    }
+
+    &__grid {
+        @include breakpoint_up(large){
+            order: 1;
+            width: 207%;
+            position: relative;
+            padding-left: 126px;
+            padding-right: 0px;
+        }
+    }
+    &__item {
+        padding-left: 36px;
+        padding-right: 36px;
+        margin-bottom: 46px;
+
+        @include breakpoint_up(large){
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 72px;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        color: $veryDarkBlue;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        @include breakpoint_up(large){
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 2;
+        color: $veryDarkBlue;
+    }
+}

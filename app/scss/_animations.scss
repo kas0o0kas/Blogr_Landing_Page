@@ -1,0 +1,72 @@
+@keyframes fade_in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fade_out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fade_in 300ms ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fade_out 300ms ease-in-out forwards;
+}
+
+@keyframes drop_in {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes drop_out {
+    from {
+        display: block;
+        opacity: 1;
+    }
+
+    99% {
+        display: block;
+        opacity: 0;
+    }
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+

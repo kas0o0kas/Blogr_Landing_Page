@@ -1,0 +1,79 @@
+.section2 {
+
+    @include breakpoint_up(large){
+        position: relative;
+        height: 400px;
+    }
+    &__wrap {
+        height: 100%;
+        @include breakpoint_down(medium){
+            text-align: center;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 230px;
+            padding-bottom: 110px;
+            position: relative;
+            background-image: url(/images/bg-pattern-circles.svg),linear-gradient(to bottom, $gVeryDarkGrayBlue, $gVeryDarkDesaturatedBlue);
+            background-size: 160%, 100%;
+            background-position: 50% -650%, 0% 0%;
+            background-repeat: no-repeat, no-repeat;
+            border-radius: 0 100px 0 100px;
+        }
+        
+
+        @include breakpoint_up(large){
+            display: flex;
+            align-items: center;
+            background-image: url(/images/bg-pattern-circles.svg),linear-gradient(to right, $gVeryDarkGrayBlue, $gVeryDarkDesaturatedBlue);
+            background-size: 70%, 100%;
+            background-position: -50% 80%, 0% 0%;
+            background-repeat: no-repeat no-repeat;
+       
+        }
+    }
+
+    &__phone {
+        @include breakpoint_down(medium){
+            position: absolute;
+            top: -180px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        
+        @include breakpoint_up(large){
+            position: relative;
+            padding-left: 120px;
+            top: 25px;
+        }
+    }
+    &__text {
+        @include breakpoint_up (large){
+            padding-left: 70px;
+            padding-right: 190px;
+        }
+    }
+
+    &__title {
+        font-size: 38px;
+        color: $white;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        opacity: 0.9;
+        padding-bottom: 20px;
+
+        @include breakpoint_up(large){
+            font-size: 40px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 2;
+        color: $white;
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/app/scss/style.css">
+  
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+
+    <div class="header__top">
+      <a href="#" class="header__logo">
+        <img src="/images/logo.svg" alt="">
+      </a>
+      <div class="header__links">
+        <div class="header__product">
+          <span>Product</span>
+           &nbsp;
+          <img class="header__arrow product__lightarrow" src="/images/icon-arrow-light.svg" alt="">
+
+          <div class="header__drop hdrop__product">
+            <a href="#">Overview</a>
+            <a href="#">Pricing</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Features</a>
+            <a href="#">Integrations</a>
+          </div>
+        </div>
+
+        <div class="header__company">
+          <span>Company</span>
+           &nbsp;
+          <img class="header__arrow company__lightarrow" src="/images/icon-arrow-light.svg" alt="">
+
+          <div class="header__drop hdrop__company">
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+          </div>
+          
+        </div>
+
+        <div class="header__connect">
+          <span> Connect</span>
+          &nbsp;
+          <img class="header__arrow connect__lightarrow" src="/images/icon-arrow-light.svg" alt="">
+          <div class="header__drop hdrop__connect">
+            <a href="#">Contact</a>
+            <a href="#">Newsletter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__account">
+        <a href="#" class="header__login">Login</a>
+        <a href="#" class="header__signup button">Sign Up</a>
+      </div>
+
+      <div class="header__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="header__menu">
+      <div class="menu__links">
+        <div class="menu__product">
+          Product &nbsp;
+          <img class="menu__arrow product__arrow" src="/images/icon-arrow-dark.svg" alt="">
+          <div class="menu__wrap drop__product">
+            <div class="drop__menu">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__company">
+          Company &nbsp;
+          <img class="menu__arrow company__arrow" src="/images/icon-arrow-dark.svg" alt="">
+          <div class="menu__wrap drop__company">
+            <div class="drop__menu ">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__connect">
+          Connect &nbsp;
+          <img class="menu__arrow connect__arrow" src="/images/icon-arrow-dark.svg" alt="">
+          <div class="menu__wrap drop__connect">
+            <div class="drop__menu">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="login">Login</a>
+      <a href="#" class="sign_up button">Sign Up</a>
+    </div>
+
+
+    <div class="header__main">
+      <div class="header__slogan">A modern publishing platform</div>
+      <div class="header__text">Grow your audience and build your online brand</div>
+      <div class="header__button">
+        <a href="#" class="button1 button">Start for Free</a>
+        <a href="#" class="button2 button">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section1">
+    <div class="section1__slogan">Designed for the future</div>
+    <div class="section1__wrap">
+      
+      <div class="section1__image"></div>
+      <div class="section1__grid">
+        <div class="section1__item">
+          <div class="section1__title">Introducing an extensible editor</div>
+          <div class="section1__text">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.</div>
+        </div>
+
+        <div class="section1__item">
+          <div class="section1__title">Robust content management</div>
+          <div class="section1__text">Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="section2__wrap">
+      <div class="section2__phone">
+        <img src="./images/illustration-phones.svg" alt="">
+      </div>
+      <div class="section2__text">
+        <div class="section2__title">State of the Art Infrastructure</div>
+      <div class="section2__description">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section3">
+    <div class="section3__wrap">
+      <div class="section3__laptop"></div>
+      <div class="section3__grid">
+        <div class="section3__item">
+          <div class="section3__title">Free, open, simple</div>
+          <div class="section3__text">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</div>
+        </div>
+
+        <div class="section3__item">
+          <div class="section3__title">Powerful tooling</div>
+          <div class="section3__text">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+            capable of producing even the most complicated sites.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="#" class="footer__logo">
+      <img src="/images/logo.svg" alt="">
+    </a>
+
+    <div class="footer__product footer__links">
+      Product
+      <a href="#">Overview</a>
+      <a href="#">Pricing</a>
+      <a href="#">Marketplace</a>
+      <a href="#">Features</a>
+      <a href="#">Integrations
+      </a>
+    </div>
+
+    <div class="footer__company footer__links">
+      Company
+      <a href="#">About</a>
+      <a href="#">Team</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer__connect footer__links">
+      Connect
+      <a href="#">Contact</a>
+      <a href="#">Newsletter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+
+  </footer>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script type="text/javascript" src="/app/js/main.js"></script>
+</body>
+</html>

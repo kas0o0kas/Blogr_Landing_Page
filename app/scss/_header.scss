@@ -1,0 +1,394 @@
+.header {
+    color: $white;
+    text-align: center;
+    border-radius: 0 0 0 100px;
+    padding-bottom: 156px;
+    //second background image  
+    background-image: url(/images/bg-pattern-intro.svg), linear-gradient(to bottom, $gVeryLightRed, $gLightRed);
+    background-position: 35% 34%;
+    background-size: 350% ;
+    background-repeat: no-repeat no-repeat;
+
+    @include breakpoint_up(large){
+        background-image: url(/images/bg-pattern-intro.svg), linear-gradient(to right, $gVeryLightRed, $gLightRed);
+        background-position: 26% 52%, 60% 50%;
+        background-size: 230% ;
+    }
+
+    &.open {
+        .header__hamburger {
+            span:nth-child(1) {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 22px;
+        padding-top: 58px;
+        padding-right: 22px;
+        padding-bottom: 120px;
+        position: relative;
+        z-index: 10;
+        font-size: 16px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        
+
+        @include breakpoint_up(large){
+            padding-right: 156px;
+            padding-left: 156px;
+        }
+    }
+
+    &__logo {
+        @include breakpoint_up(large){
+
+            padding-right: 15px;
+        }
+    }
+
+    &__links {
+        display: none;
+        flex-grow: 4;
+        >div {
+            position: relative;
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-bottom: 30px;
+            >span {
+                opacity: 0.8;
+            }
+            &:hover {
+                &>span {
+                    text-decoration: underline;
+
+                }
+            }
+        }
+        @include breakpoint_up(large){
+            display: flex;
+        }
+
+    }
+
+    &__arrow {
+        &.rotate {
+            transform: rotate(-180deg);
+        }
+        transition: all 300ms ease-in-out;
+    }
+
+    &__drop {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        text-align: left;
+        background-color: $white;
+        padding-left: 24px;
+        padding-top: 34px;
+        padding-right: 38px;
+        padding-bottom: 34px;
+        border-radius: 10px;
+        left: -10px;
+        top: 55px;
+
+        &.drop-in {
+            display: block;
+            animation: drop_in 500ms ease-in-out forwards;
+        }
+
+        &.drop-out {
+            //display: block;
+            animation: drop_out 300ms ease-in-out forwards;
+        }
+
+
+        a {
+            display: block;
+            font-family: 'Overpass', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            color: $veryDarkBlackBlue;
+
+
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -8px;
+    }
+
+    &__login {
+        display: none;
+        padding: 28px;
+        font-size: 16px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        color: $white;
+        opacity: 0.8;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(110%);
+        }
+        @include breakpoint-up (large){
+            display: block;
+        }
+    }
+
+    &__signup {
+        display: none;
+        color: $lightRed;
+        background-color: $white;
+        font-size: 16px;
+        padding-right: 34px;
+        padding-left: 34px;
+
+
+        &:hover {
+            background-color: $veryLightRed;
+            color: $white;
+            opacity: 0.7;
+            transition: all 200ms ease-in-out;
+        }
+        @include breakpoint-up (large){
+            display: block;
+        }
+    }
+
+
+    &__hamburger {
+
+        &:hover {
+            cursor: pointer;
+        }
+        span {
+            width: 34px;
+            height: 3px;
+            background-color: $white;
+            display: block;
+            transform-origin: 3px 2px;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+
+        @include breakpoint_up(large){
+            display: none;
+        }
+    }
+    &__menu {
+        // display: flex;
+        // flex-direction: column;
+        border-radius: 10px;
+        align-items: center;
+        background-color: $white;
+        position: absolute;
+        top: 125px;
+        visibility: hidden;
+        color: $veryDarkBlue;
+        width: 88%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 38px;
+        padding-bottom: 38px;
+        z-index: 10;
+
+        @include breakpoint_up(large){
+            display: none;
+        }
+        .menu__links {
+            
+            >div {
+                margin-bottom: 38px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .menu__arrow {
+                &.rotate {
+                    transform: rotate(-180deg);
+                }
+                transition: all 300ms ease-in-out;
+            }
+
+            .menu__wrap {
+                display: none;
+                visibility: visible;
+                position: relative;
+                width: 80%; 
+                left: 50%;
+                transform: translateX(-50%);
+                padding-top: 24px;
+                padding-bottom: 26px;
+                border-bottom: 1px solid #e8e8f0;
+                
+                &.drop-in {
+                    display: block;
+                    animation: drop_in 500ms ease-in-out forwards;
+                }
+
+                &.drop-out {
+                    //display: block;
+                    animation: drop_out 300ms ease-in-out forwards;
+                }
+                
+                .drop__menu {
+                    padding-top: 28px;
+                    padding-bottom: 28px;
+                    background-color: #EFEFF1; 
+                    border-radius: 10px;
+
+                    a {
+                        color: $veryDarkBlue;
+                        display: block;
+                        &:not(:last-child) {
+                            margin-bottom: 28px;
+                        }
+
+                        &:hover {
+                            transform: scale(110%);
+                        }
+
+                        transition: all 200ms ease-in-out;
+                    }
+    
+                }
+            }
+            
+
+            a {
+                
+            }
+
+        }
+        .login{
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: $veryDarkBlue;
+            margin-bottom: 24px;
+            transition: all 200ms ease-in-out;
+            
+            &:hover {
+                color: $lightRed;
+                transform: scale(110%);
+            }
+        }
+
+        .sign_up {
+            display: block;
+            position: relative;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            color: $white;
+            background-image: linear-gradient(to right, $gVeryLightRed, $gLightRed);
+            padding-left: 42px;
+            padding-right: 42px;
+            width: 137px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &:hover {
+                opacity: 0.8;
+                transition: all 200ms ease-in-out;
+            }
+        }   
+
+    }
+
+    &__main {
+        padding-left: 42px;
+        padding-right: 42px;
+        position: relative;
+        z-index: 0;
+
+        
+    }
+
+    &__slogan {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 12px;
+
+        @include breakpoint_up (large){
+            font-size: 54px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        opacity: 0.8;
+        margin-bottom: 48px;
+
+        @include breakpoint_up (large){
+            font-size: 20px;
+            opacity: 0.5;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 14px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        
+        @include breakpoint_up (large){
+            justify-content: center;
+        }
+        .button1 {
+            color: $lightRed;
+            background-color: $white;
+            margin-right: 10px;
+
+            &:hover {
+                background-color: $veryLightRed;
+                color: $white;
+                opacity: 0.7;
+                transition: all 200ms ease-in-out;
+            }
+        }
+        
+
+        .button2 {
+            border: 1px solid $white;
+            color: $white;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-left: 10px;
+
+            &:hover {
+                background-color: $white;
+                color: $veryLightRed;
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+}
+
